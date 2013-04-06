@@ -1,6 +1,11 @@
-*.class
+# eclipse
+.project
+.classpath
+/.settings
+/target
 
-# Package Files #
+# github java defaults
+*.class
 *.jar
 *.war
 *.ear

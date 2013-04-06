@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd"
+	default-autowire="no" default-lazy-init="true">
+
+	<!-- scan for servlet resources -->
+	<context:component-scan base-package="com.bobnis.conditum" />
+
+	<!-- enables '@Required' annotation support -->
+	<bean
+		class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
+
+	<!-- version.properties is filtered through maven's <build> -->
+	<bean id="versionProperties" class="org.springframework.core.io.ClassPathResource">
+		<constructor-arg value="version.properties" />
+	</bean>
+
+	<!-- static HTML help page -->
+	<bean id="help" class="org.springframework.core.io.ClassPathResource">
+		<constructor-arg value="documentation/help.html" />
+	</bean>
+
+	<!-- documentation resource (/) that serves static help page -->
+	<bean id="documentation" scope="singleton"
+		class="com.bobnis.conditum.resource.Documentation">
+
+		<property name="page">
+			<ref local="help" />
+		</property>
+	</bean>
+
+	<!-- version resource (/version) that exposes -->
+	<bean id="version" scope="singleton" class="com.bobnis.conditum.resource.Version">
+		<property name="version">
+			<ref local="versionProperties" />
+		</property>
+	</bean>
+
+</beans>
