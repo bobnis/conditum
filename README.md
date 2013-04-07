@@ -1,4 +1,4 @@
-# conditum
+# conditum [![Build Status](https://travis-ci.org/bobnis/conditum.png?branch=master)](https://travis-ci.org/bobnis/conditum)
 - [latin for storehouse](http://translate.google.com/#la/en/conditum "conditum is latin for storehouse") (translate.google.com)
 
 ## A RESTful Non-Consumable In-App Purchase Manager
