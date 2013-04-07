@@ -22,7 +22,7 @@ At a high level, contidum's main goal is to be the "Developer Server" in the fol
 * [Amazon CloudFront](http://aws.amazon.com/cloudfront/ "Amazon CloudFront") (aws.amazon.com) is the intended content delivery network
 
 ## Quick Getting Started
-1. Download and, if required, extract contidum
+1. Download and, if required, extract conditum
 2. Run it
  * ```mvn clean jetty:run-war```
 3. Review the documentation
