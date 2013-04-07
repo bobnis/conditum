@@ -2,7 +2,7 @@
 - [latin for storehouse](http://translate.google.com/#la/en/conditum "conditum is latin for storehouse") (translate.google.com)
 
 ## A RESTful Non-Consumable In-App Purchase Manager
-At a high level, contidum's main goal is to be the "Developer Server" in the following diagram:
+At a high level, conditum's main goal is to be the "Developer Server" in the following diagram:
 ![Store Transactions](http://i.imgur.com/UVjgar5.png "Store Transactions")
 * figure from [In-App Purchase Programming Guide](http://developer.apple.com/library/ios/#documentation/NetworkingInternet/Conceptual/StoreKitGuide/APIOverview/OverviewoftheStoreKitAPI.html "In-App Purchase Programming Guide") (developer.apple.com)
 
